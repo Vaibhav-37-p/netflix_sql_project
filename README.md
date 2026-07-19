@@ -19,7 +19,7 @@ The main objectives of this project are:
 * Identify popular genres and content categories.
 * Explore actors and directors featured in Netflix content.
 * Categorise content based on specific keywords and descriptions.
-* Apply SQL techniques to answer practical business questions.
+* Apply SQL techniques to answer practical analytical questions.
 
 ---
 
@@ -49,6 +49,29 @@ The dataset contains information about Movies and TV Shows available on Netflix.
 * `duration` – Movie duration or number of TV show seasons
 * `listed_in` – Genre/category
 * `description` – Description of the content
+
+---
+
+## 🗄️ Database Schema
+
+The following table structure was used to import and analyse the Netflix dataset in PostgreSQL:
+
+```sql
+CREATE TABLE netflix (
+    show_id VARCHAR(10),
+    type VARCHAR(10),
+    title VARCHAR(150),
+    director VARCHAR(250),
+    casts VARCHAR(1000),
+    country VARCHAR(150),
+    date_added VARCHAR(50),
+    release_year INT,
+    rating VARCHAR(10),
+    duration VARCHAR(15),
+    listed_in VARCHAR(100),
+    description VARCHAR(250)
+);
+```
 
 ---
 
@@ -83,7 +106,7 @@ This project demonstrates the use of:
 * `GROUP BY`
 * `ORDER BY`
 * `HAVING`
-* Aggregate functions such as `COUNT()`
+* Aggregate functions such as `COUNT()` and `MAX()`
 * `DISTINCT`
 * `LIMIT`
 * `CASE` statements
@@ -104,7 +127,7 @@ This project demonstrates the use of:
 * Explored the most frequently occurring content ratings and genres.
 * Analysed content release patterns across different years.
 * Identified actors and directors with significant representation in the dataset.
-* Examined content duration and TV show season patterns.
+* Examined movie duration and TV show season patterns.
 * Used text-based analysis to categorise content based on keywords in descriptions.
 
 ---
@@ -114,21 +137,25 @@ This project demonstrates the use of:
 ```text
 Netflix-SQL-Data-Analysis/
 │
-├── netflix_titles.csv
-├── netflix_analysis.sql
-└── README.md
+├── README.md
+├── solutions.sql
+└── netflix_titles.csv
 ```
+
+* **README.md** – Overview and documentation of the project.
+* **solutions.sql** – Contains the database schema and SQL queries used to answer the 15 business questions.
+* **netflix_titles.csv** – Dataset used for the analysis.
 
 ---
 
 ## 🚀 How to Run the Project
 
-1. Install PostgreSQL and pgAdmin 4.
+1. Install **PostgreSQL** and **pgAdmin 4**.
 2. Create a new database in PostgreSQL.
-3. Create the Netflix table using the SQL script.
+3. Create the Netflix table using the provided database schema.
 4. Import the `netflix_titles.csv` dataset into the table.
-5. Open the SQL query file in pgAdmin 4.
-6. Execute the queries to explore the analysis and results.
+5. Open `solutions.sql` in pgAdmin 4.
+6. Execute the SQL queries to explore the analysis and results.
 
 ---
 
@@ -136,12 +163,14 @@ Netflix-SQL-Data-Analysis/
 
 This project helped me strengthen my SQL skills by working with a real-world dataset and solving multiple analytical problems. It provided practical experience in data exploration, aggregation, filtering, string manipulation, date analysis, and writing SQL queries to answer business-related questions.
 
+The project also demonstrates my ability to work with structured datasets, translate analytical questions into SQL queries, and extract useful insights from data.
+
 ---
 
 ## 👤 Author
 
 **Vaibhav Panchal**
 
-Aspiring Data Analyst with skills in SQL, Power BI, Excel, and Python.
+Aspiring Data Analyst with skills in **SQL, Power BI, Excel, and Python**.
 
 This project is part of my data analytics portfolio, demonstrating my ability to use SQL to analyse datasets and generate meaningful insights.
